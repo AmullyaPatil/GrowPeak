@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/GrowPeak/static/css/main.5b1a651a.css",
+    "main.js": "/GrowPeak/static/js/main.f7b35ff6.js",
+    "static/js/488.d149a505.chunk.js": "/GrowPeak/static/js/488.d149a505.chunk.js",
+    "index.html": "/GrowPeak/index.html",
+    "main.5b1a651a.css.map": "/GrowPeak/static/css/main.5b1a651a.css.map",
+    "main.f7b35ff6.js.map": "/GrowPeak/static/js/main.f7b35ff6.js.map",
+    "488.d149a505.chunk.js.map": "/GrowPeak/static/js/488.d149a505.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5b1a651a.css",
+    "static/js/main.f7b35ff6.js"
+  ]
+}
