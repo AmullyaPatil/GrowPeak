@@ -1,0 +1,26 @@
+/* Footer Section */
+.footer {
+    background-color: #F6DCFC;
+    color: #000000;
+    padding: 1rem 2rem;
+    text-align: center;
+  }
+  
+  .footer-text {
+    margin-right: 1rem;
+  }
+  
+  .social-links {
+    display: inline-flex;
+    gap: 1rem;
+  }
+  
+  .social-link {
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  .social-link:hover {
+    color: #f3e5f5;
+  }
+  
