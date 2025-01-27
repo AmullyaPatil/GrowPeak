@@ -24,7 +24,7 @@ const AuthPage = ({ onAuthSuccess }) => {
   const handleSubmit = (event, formData, callback) => {
     event.preventDefault();
     if (onAuthSuccess) onAuthSuccess(formData.profileImage);
-    window.history.back();
+    // window.history.back();
   };
 
   return (
