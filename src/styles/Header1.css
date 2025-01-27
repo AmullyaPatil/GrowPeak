@@ -55,3 +55,24 @@
     justify-content: center;
     color: #6b46c1;
   }
+  .header-action {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-signin {
+    background-color: white;
+    color: #6a0dad;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .header-user-icon .user-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
