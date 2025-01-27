@@ -24,18 +24,15 @@ const AuthPage = ({ onAuthSuccess }) => {
   const handleSubmit = (event, formData, callback) => {
     event.preventDefault();
     if (onAuthSuccess) onAuthSuccess(formData.profileImage);
-    // window.history.back();
   };
 
   return (
     <div className="auth-page">
       <div className="auth-container">
 
-        {/* Sign Up Section */}
         <div className="auth-section sign-up-section">
           <h2>Sign Up</h2>
           <form onSubmit={(e) => handleSubmit(e, signUpData, onAuthSuccess)}>
-            {/* Profile Image Upload */}
             <div className="profile-upload">
               <label htmlFor="signUpProfileImageInput">
                 {signUpData.profileImage ? (
@@ -53,7 +50,6 @@ const AuthPage = ({ onAuthSuccess }) => {
               />
             </div>
 
-            {/* Other form fields */}
             <input type="text" name="fullName" placeholder="Full Name" value={signUpData.fullName} onChange={handleChange(setSignUpData)} required />
             <input type="email" name="email" placeholder="Email ID" value={signUpData.email} onChange={handleChange(setSignUpData)} required />
             <input type="password" name="password" placeholder="Password" value={signUpData.password} onChange={handleChange(setSignUpData)} required />
@@ -62,11 +58,9 @@ const AuthPage = ({ onAuthSuccess }) => {
           </form>
         </div>
 
-        {/* Sign In Section */}
         <div className="auth-section sign-in-section">
           <h2>Sign In</h2>
           <form onSubmit={(e) => handleSubmit(e, signInData, onAuthSuccess)}>
-            {/* Profile Image Upload */}
             <div className="profile-upload">
               <label htmlFor="signInProfileImageInput">
                 {signInData.profileImage ? (
@@ -84,7 +78,6 @@ const AuthPage = ({ onAuthSuccess }) => {
               />
             </div>
 
-            {/* Other form fields */}
             <input type="text" name="username" placeholder="Username" value={signInData.username} onChange={handleChange(setSignInData)} required />
             <input type="password" name="password" placeholder="Password" value={signInData.password} onChange={handleChange(setSignInData)} required />
             <button type="submit" className="action-btn">Login</button>
