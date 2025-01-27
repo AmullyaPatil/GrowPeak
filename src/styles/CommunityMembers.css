@@ -1,0 +1,61 @@
+.community-members {
+    padding: 40px;
+    /* background-color: #f9f9f9; */
+    border-radius: 8px;
+  }
+  .community-section-title{
+    text-align: center;
+  }
+  .community-members-grid {
+    display: flex;
+    gap: 70px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .community-member-card {
+    flex: 1;
+    max-width: 200px;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .comm-member-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .community-member-name {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .community-member-role {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .community-social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .community-icon {
+    font-size: 1.2rem;
+    color: #6a0dad; /* Purple */
+    text-decoration: none;
+  }
+  
+  .community-icon:hover {
+    color: #5a0b9e; /* Darker Purple */
+  }
+  
