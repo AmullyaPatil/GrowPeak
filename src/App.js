@@ -5,7 +5,8 @@ import Mentors from "./Pages/MentorSearchPage";
 import Header1 from "./components/Header1";
 import DiscussionPage from "./components/Forum";
 import Footer from "./components/Footer";
-import AuthForm from "./components/AuthForm"; // Import the new page
+import AuthForm from "./components/AuthForm";
+import BecomeMentor from "./components/BecomeMentor";
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/mentors" element={<Mentors />} />
         <Route path="/forum" element={<DiscussionPage />} />
-        <Route path="/auth" element={<AuthForm />} /> {/* Add the route */}
+        <Route path="/auth" element={<AuthForm />} />
+        <Route path="/become-mentor" element={<BecomeMentor />} />
       </Routes>
       <Footer />
     </Router>

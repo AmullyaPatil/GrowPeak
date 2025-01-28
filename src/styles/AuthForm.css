@@ -1,25 +1,22 @@
-/* General Page Styling */
 .auth-page {
     height: 100vh;
     display: flex;
-    justify-content: center; /* Centering the form in the middle of the screen */
+    justify-content: center;
     align-items: center;
-    background-color: #f8f8ff;
+    /* background-color: #f8f8ff; */
     margin-right: 30px;
   }
-  
-  /* Main Container */
+
   .auth-container {
     display: flex;
     width: 800px;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     border-radius: 10px;
     gap: 30px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
     overflow: hidden;
   }
-  
-  /* Section Styling */
+
   .auth-section {
     flex: 1;
     padding: 40px;
@@ -31,26 +28,27 @@
   
   .sign-up-section {
     background-color: #f8eaff;
-    border-right: 2px solid #f4dfff;
+    border: 2px solid #f4dfff;
+    border-radius: 10px;
   }
   
   .sign-in-section {
     background-color: #fff5ff;
-    border-left: 2px solid #f4dfff;
+    border: 2px solid #f4dfff;
+    border-radius: 10px;
   }
-  
-  /* Profile Image Styling */
+
   .profile-upload label {
     display: block;
     text-align: center;
     cursor: pointer;
-    margin-bottom: 20px; /* Space between the profile image and form */
+    margin-bottom: 20px;
   }
   
   .uploaded-image {
     width: 80px;
     height: 80px;
-    border-radius: 50%; /* Circular profile image */
+    border-radius: 50%;
     object-fit: cover;
   }
   
@@ -70,7 +68,6 @@
     position: relative;
   }
   
-  /* Form Styling */
   form {
     display: flex;
     flex-direction: column;
@@ -105,12 +102,11 @@
     font-size: 1.5rem;
     margin-bottom: 20px;
   }
-  
-  /* Header Profile Image */
+
   .header-profile .profile-image {
     width: 40px;
     height: 40px;
-    border-radius: 50%; /* Circular profile image in header */
+    border-radius: 50%;
     object-fit: cover;
   }
   .header-profile{
