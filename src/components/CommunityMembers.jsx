@@ -26,6 +26,8 @@ const CommunityMembers = () => {
   return (
     <div className="community-members">
       <h2 className="community-section-title">Active Community Members</h2>
+      <p className="community-subtitle">Meet the brightest minds in our community, collaborating to share insights and ideas.</p>
+      <p className="community-subtitle">Connect, learn, and grow together!</p>
       <div className="community-members-grid">
         {members.map((member, index) => (
           <div
