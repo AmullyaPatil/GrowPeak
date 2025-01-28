@@ -1,0 +1,147 @@
+/* General Styles */
+.become-mentor-container {
+  padding: 20px;
+  background-color: #f9f9ff;
+  color: #333;
+}
+
+/* Header Section */
+.become-mentor-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.become-mentor-header h1 {
+  font-size: 2.5rem;
+  color: #6a0dad;
+  margin-bottom: 10px;
+}
+
+.become-mentor-header p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Section Style */
+.become-mentor-section {
+  display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      /* background-color: #fff; */
+      /* border-radius: 10px; */
+      padding: 40px;
+      /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+}
+
+.become-mentor-left {
+  flex: 1;
+  text-align: left;
+  padding: 30px;
+}
+
+.become-mentor-text h2 {
+  font-size: 2rem;
+  color: #6a0dad;
+  margin-bottom: 15px;
+}
+
+.become-mentor-text p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.become-mentor-text ul {
+  list-style-type: disc;
+  margin: 10px 0;
+  padding-left: 20px;
+  color: #666;
+  text-align: left;
+}
+
+.become-mentor-text li {
+  margin-bottom: 10px;
+}
+
+.become-mentor-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.become-mentor-image img {
+  max-width: 80%;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(89, 5, 89, 0.5);
+}
+.become-mentor-image img:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+/* Get Started Section with Background Image */
+.get-started {
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url("../Assets/becomementor.png");
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 40px;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);*/
+    background-color: #f8eaff;
+}
+
+.get-started .become-mentor-text {
+  text-align: center;
+  flex: 1;
+  padding: 30px;
+}
+
+.get-started h2 {
+  color: #000000;
+}
+
+.get-started p {
+  color: #000000;
+}
+
+.get-started button {
+  padding: 12px 25px;
+  background-color: #6a0dad;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.get-started button:hover {
+  background-color: #5a3cd4;
+}
+
+.get-started .become-mentor-image {
+  flex: 1;
+  display: none; /* Hide the placeholder image for this section */
+}
+
+/* Footer Section */
+.become-mentor-footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1rem;
+  color: #777;
+}
+
+.become-mentor-footer a {
+  color: #6a0dad;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.become-mentor-footer a:hover {
+  text-decoration: underline;
+}
