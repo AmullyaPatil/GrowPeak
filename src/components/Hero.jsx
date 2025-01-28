@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/Hero.css";
-import user from "../Assets/image.png";
+import user from "../Assets/imag.png";
+import hero from "../Assets/hero.png";
 
 const Hero = () => {
   return (
@@ -8,15 +9,18 @@ const Hero = () => {
       <main className="main-content">
         <div className="content-wrapper">
           <div className="text-section">
-            <h2 className="headline">Where Startups Grow Together.</h2>
+            <h2 className="headline">GrowPeak</h2>
+            <h2 className="headline1">Where <span style={{color:'#6a0dad'}}>Startups</span> Grow Together.</h2>
             <p className="description">
               Join our vibrant community of entrepreneurs, innovators, and experts. Share knowledge,
               get support, and collaborate on your startup journey.
             </p>
             <div className="button-group">
+            <a href="#/forum" style={{textDecoration:'none'}}>
               <button className="primary-button">
                 Join Discussion <span className="arrow">→</span>
               </button>
+              </a>
               <button className="secondary-button">
                 Browse Topics <span className="icon">🔍</span>
               </button>
@@ -31,7 +35,7 @@ const Hero = () => {
             </div>
           </div>
           <div className="image-section">
-            <img src="placeholder-image.jpg" alt="Illustration" className="main-image" />
+            <img src={hero} alt="Illustration" className="main-image" />
           </div>
         </div>
       </main>

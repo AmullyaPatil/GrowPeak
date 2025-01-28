@@ -22,16 +22,16 @@
     margin: 0 10px;
     text-decoration: none;
     color: #333;
-    font-size: 1rem;
+    font-size: 18px;
     transition: color 0.3s;
   }
   
   .header-nav a:hover {
-    color: #6a0dad; /* Purple hover effect */
+    color: #6a0dad
   }
   
   .header-signin {
-    background-color: #6a0dad; /* Purple */
+    background-color: #6a0dad;
     color: #fff;
     padding: 5px 15px;
     border: none;
@@ -42,7 +42,8 @@
   }
   
   .header-signin:hover {
-    background-color: #5a0b9e; /* Darker purple */
+    background-color: #e3b3f5;
+    color: #5a0b9e;
   }
 
   .header-user-icon1 {
@@ -54,6 +55,7 @@
     align-items: center;
     justify-content: center;
     color: #6b46c1;
+    /* #6a0dad; */
   }
   .header-action {
     display: flex;
@@ -61,8 +63,8 @@
   }
   
   .header-signin {
-    background-color: white;
-    color: #6a0dad;
+    color: white;
+    background-color: #6a0dad;
     border: none;
     padding: 8px 16px;
     border-radius: 5px;

@@ -14,12 +14,12 @@ const Header1 = () => {
   return (
     <>
       <header className="header">
-        <div className="header-logo">Startopia</div>
+        <div className="header-logo">GrowPeak</div>
         <nav className="header-nav">
           <a href="#/">Home</a>
           <a href="#/forum">Community</a>
           <a href="#mentors">Mentors</a>
-          <a href="#events">Become a Mentor</a>
+          <a href="#become-mentor">Become a Mentor</a>
         </nav>
 
         {/* Display the profile image in the header if logged in */}
