@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/Forum.css";
-import user from "../Assets/image.png";
+import user from "../Assets/imag.png";
 
 const DiscussionPage = () => {
   return (
