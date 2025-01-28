@@ -1,8 +1,7 @@
 /* Mentor Search Page Styles */
 
 .mentor-search-container {
-  font-family: Arial, sans-serif;
-  padding: 2rem;
+  padding: 2rem 5rem;
   background-color: #f7f7f9;
 }
 
@@ -14,7 +13,7 @@
 .search-title {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #333;
+  color: #6a0dad;
 }
 
 .search-subtitle {
@@ -118,7 +117,24 @@
   color: #999;
   margin: 0.25rem 0;
 }
+.mentor-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+.mentor-card.selected {
+  border: 2px solid #994fc7;
+  background-color: #f9f1fa;
+}
 
+.mentor-image-placeholder {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
 .bookmark-icon {
   font-size: 1.5rem;
   color: #aaa;
