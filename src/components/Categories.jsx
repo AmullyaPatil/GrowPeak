@@ -31,7 +31,7 @@ const Categories = () => {
       <h2 className="section-title">Explore Categories</h2>
       <div className="categories-grid">
         {categories.map((category, index) => (
-          <div className="category-card" key={index}>
+          <a href="#/forum" key={index} className="category-card">
             <span className="category-icon">{category.icon}</span>
             <h3 className="category-title">{category.title}</h3>
             <p className="category-description">{category.description}</p>
@@ -39,7 +39,7 @@ const Categories = () => {
               <span className="threads">{category.threads}</span>
               <span className="members">{category.members}</span>
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </div>

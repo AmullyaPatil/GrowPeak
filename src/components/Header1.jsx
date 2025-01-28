@@ -1,28 +1,38 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/Header1.css";
 import AuthPage from "./AuthForm";
 
 const Header1 = () => {
   const [showAuthForm, setShowAuthForm] = useState(false);
-  const [userLoggedIn, setUserLoggedIn] = useState(null); // Store user profile image
+  const [userLoggedIn, setUserLoggedIn] = useState(null);
+  const [activePage, setActivePage] = useState("");
+
+  useEffect(() => {
+    setActivePage(window.location.hash);
+    const handleHashChange = () => setActivePage(window.location.hash);
+    window.addEventListener("hashchange", handleHashChange);
+
+    return () => {
+      window.removeEventListener("hashchange", handleHashChange);
+    };
+  }, []);
 
   const handleAuthSuccess = (profileImage) => {
-    setUserLoggedIn(profileImage); // Store profile image URL
+    setUserLoggedIn(profileImage);
     setShowAuthForm(false);
   };
 
   return (
     <>
       <header className="header">
-        <div className="header-logo">GrowPeak</div>
+        <a href="#/" className={`header-logo ${activePage === "#/" ? "active" : ""}`}>GrowPeak</a>
         <nav className="header-nav">
-          <a href="#/">Home</a>
-          <a href="#/forum">Community</a>
-          <a href="#mentors">Mentors</a>
-          <a href="#become-mentor">Become a Mentor</a>
+          <a href="#/" className={activePage === "#/" ? "active" : ""}>Home</a>
+          <a href="#/forum" className={activePage === "#/forum" ? "active" : ""}>Community</a>
+          <a href="#mentors" className={activePage === "#mentors" ? "active" : ""}>Mentors</a>
+          <a href="#become-mentor" className={activePage === "#become-mentor" ? "active" : ""}>Become a Mentor</a>
         </nav>
 
-        {/* Display the profile image in the header if logged in */}
         {userLoggedIn ? (
           <button className="header-profile">
             <img src={userLoggedIn} alt="Profile" className="profile-image" />
