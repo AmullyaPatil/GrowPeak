@@ -1,7 +1,5 @@
-/* Mentor Search Page Styles */
-
 .mentor-search-container {
-  padding: 2rem 5rem;
+  padding: 2rem 8rem;
   background-color: #f7f7f9;
 }
 
@@ -152,6 +150,7 @@
   border: 1px solid #eee;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 2px solid #994fc7;
 }
 
 .profile-image-placeholder {
