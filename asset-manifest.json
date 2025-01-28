@@ -1,16 +1,22 @@
 {
   "files": {
-    "main.css": "/GrowPeak/static/css/main.016831fa.css",
-    "main.js": "/GrowPeak/static/js/main.9058172c.js",
+    "main.css": "/GrowPeak/static/css/main.d47c4680.css",
+    "main.js": "/GrowPeak/static/js/main.5778f5cd.js",
     "static/js/488.d149a505.chunk.js": "/GrowPeak/static/js/488.d149a505.chunk.js",
-    "static/media/image.png": "/GrowPeak/static/media/image.221f8802f9348041bbea.png",
+    "static/media/hero.png": "/GrowPeak/static/media/hero.198d9b64f9446f96c9df.png",
+    "static/media/mentorbenefits.png": "/GrowPeak/static/media/mentorbenefits.48e86cec79e6fc5e60af.png",
+    "static/media/member2.png": "/GrowPeak/static/media/member2.0d8441576a3af25bc816.png",
+    "static/media/member3.png": "/GrowPeak/static/media/member3.f6264222b2accdb6957b.png",
+    "static/media/becomementor.png": "/GrowPeak/static/media/becomementor.5b8161864d1fab9a8560.png",
+    "static/media/member1.png": "/GrowPeak/static/media/member1.a9d1456e6ac2a180ab8f.png",
+    "static/media/imag.png": "/GrowPeak/static/media/imag.221f8802f9348041bbea.png",
     "index.html": "/GrowPeak/index.html",
-    "main.016831fa.css.map": "/GrowPeak/static/css/main.016831fa.css.map",
-    "main.9058172c.js.map": "/GrowPeak/static/js/main.9058172c.js.map",
+    "main.d47c4680.css.map": "/GrowPeak/static/css/main.d47c4680.css.map",
+    "main.5778f5cd.js.map": "/GrowPeak/static/js/main.5778f5cd.js.map",
     "488.d149a505.chunk.js.map": "/GrowPeak/static/js/488.d149a505.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.016831fa.css",
-    "static/js/main.9058172c.js"
+    "static/css/main.d47c4680.css",
+    "static/js/main.5778f5cd.js"
   ]
 }
