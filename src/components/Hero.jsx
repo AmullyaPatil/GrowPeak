@@ -9,7 +9,7 @@ const Hero = () => {
       <main className="main-content">
         <div className="content-wrapper">
           <div className="text-section">
-            <h2 className="headline">GrowPeak</h2>
+            <h2 className="headline animate__animated animate__backInDown">GrowPeak</h2>
             <h2 className="headline1">Where <span style={{color:'#6a0dad'}}>Startups</span> Grow Together.</h2>
             <p className="description">
               Join our vibrant community of entrepreneurs, innovators, and experts. Share knowledge,
