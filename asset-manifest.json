@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/GrowPeak/static/css/main.970071e8.css",
-    "main.js": "/GrowPeak/static/js/main.003c2c29.js",
+    "main.js": "/GrowPeak/static/js/main.4b7c527c.js",
     "static/js/488.d149a505.chunk.js": "/GrowPeak/static/js/488.d149a505.chunk.js",
     "static/media/hero.png": "/GrowPeak/static/media/hero.198d9b64f9446f96c9df.png",
     "static/media/mentorbenefits.png": "/GrowPeak/static/media/mentorbenefits.48e86cec79e6fc5e60af.png",
@@ -12,11 +12,11 @@
     "static/media/imag.png": "/GrowPeak/static/media/imag.221f8802f9348041bbea.png",
     "index.html": "/GrowPeak/index.html",
     "main.970071e8.css.map": "/GrowPeak/static/css/main.970071e8.css.map",
-    "main.003c2c29.js.map": "/GrowPeak/static/js/main.003c2c29.js.map",
+    "main.4b7c527c.js.map": "/GrowPeak/static/js/main.4b7c527c.js.map",
     "488.d149a505.chunk.js.map": "/GrowPeak/static/js/488.d149a505.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.970071e8.css",
-    "static/js/main.003c2c29.js"
+    "static/js/main.4b7c527c.js"
   ]
 }
