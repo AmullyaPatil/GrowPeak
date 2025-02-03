@@ -264,6 +264,16 @@
     padding: 15px;
     margin-top: 15px;
   }
+  .content-wrapper {
+    gap: 20px;
+    justify-content: center;
+  }
+  .image-section{
+    order: 1;
+  }
+  .text-section{
+    order:2;
+  }
 
   .headline {
     font-size: 1.8rem;
