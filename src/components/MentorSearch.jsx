@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/MentorSearch.css";
 
 const MentorSearch = () => {
@@ -7,9 +7,21 @@ const MentorSearch = () => {
   const [industry, setIndustry] = useState("All");
   const [experience, setExperience] = useState("All");
   const [availability, setAvailability] = useState("All");
+  const [selectedMentor, setSelectedMentor] = useState(null);
+  const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 480);
+  const [showProfile, setShowProfile] = useState(false); // Track profile visibility in mobile view
 
-  // Track the currently selected mentor
-  // const [selectedMentor, setSelectedMentor] = useState(null);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobileView(window.innerWidth <= 480);
+      if (window.innerWidth > 480) {
+        setShowProfile(false); // Ensure profile and list are visible on larger screens
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const mentorData = [
     {
@@ -91,32 +103,14 @@ const MentorSearch = () => {
       image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK0160XxXwQToKDcNLlNSggxvpZs6SbYtCMQdVf91ok1tzPC3eT9nwEzR85-zvF4qnm-k&usqp=CAU",
     },
   ];
-  const [selectedMentor, setSelectedMentor] = useState(mentorData[0]);
-
-  const filteredMentors = mentorData.filter((mentor) => {
-    const matchesExpertise = expertise
-      ? mentor.title.toLowerCase().includes(expertise.toLowerCase())
-      : true;
-    const matchesLocation = location
-      ? mentor.location.toLowerCase().includes(location.toLowerCase())
-      : true;
-    const matchesIndustry = industry !== "All" ? mentor.industry === industry : true;
-    const matchesExperience =
-      experience !== "All" ? mentor.experience.includes(experience) : true;
-    const matchesAvailability =
-      availability !== "All" ? mentor.available === availability : true;
-
-    return (
-      matchesExpertise &&
-      matchesLocation &&
-      matchesIndustry &&
-      matchesExperience &&
-      matchesAvailability
-    );
-  });
 
   const handleMentorClick = (mentor) => {
     setSelectedMentor(mentor);
+    if (isMobileView) setShowProfile(true); // Show profile in mobile view
+  };
+
+  const handleBackClick = () => {
+    setShowProfile(false); // Go back to mentor list in mobile view
   };
 
   return (
@@ -128,48 +122,24 @@ const MentorSearch = () => {
 
       <div className="search-section">
         <div className="search-inputs">
-          <input
-            type="text"
-            value={expertise}
-            onChange={(e) => setExpertise(e.target.value)}
-            placeholder="Search by expertise"
-            className="filter-input"
-          />
-          <input
-            type="text"
-            value={location}
-            onChange={(e) => setLocation(e.target.value)}
-            placeholder="Location"
-            className="filter-input"
-          />
+          <input type="text" value={expertise} onChange={(e) => setExpertise(e.target.value)} placeholder="Search by expertise" className="filter-input" />
+          <input type="text" value={location} onChange={(e) => setLocation(e.target.value)} placeholder="Location" className="filter-input" />
           <button className="apply-button">Apply</button>
         </div>
         <div className="filter-options">
-          <select
-            className="filter-dropdown"
-            onChange={(e) => setIndustry(e.target.value)}
-            value={industry}
-          >
+          <select className="filter-dropdown" onChange={(e) => setIndustry(e.target.value)} value={industry}>
             <option value="All">Industry</option>
             <option value="Tech">Tech</option>
             <option value="Design">Design</option>
             <option value="Marketing">Marketing</option>
           </select>
-          <select
-            className="filter-dropdown"
-            onChange={(e) => setExperience(e.target.value)}
-            value={experience}
-          >
+          <select className="filter-dropdown" onChange={(e) => setExperience(e.target.value)} value={experience}>
             <option value="All">Experience Level</option>
             <option value="1+ years">1+ years</option>
             <option value="2+ years">2+ years</option>
             <option value="3+ years">3+ years</option>
           </select>
-          <select
-            className="filter-dropdown"
-            onChange={(e) => setAvailability(e.target.value)}
-            value={availability}
-          >
+          <select className="filter-dropdown" onChange={(e) => setAvailability(e.target.value)} value={availability}>
             <option value="All">Availability</option>
             <option value="Weekdays">Weekdays</option>
             <option value="Weekends">Weekends</option>
@@ -179,50 +149,44 @@ const MentorSearch = () => {
       </div>
 
       <div className="mentor-results-section">
-        {/* Left-side Mentor List */}
-        <div className="mentor-list">
-          {filteredMentors.map((mentor) => (
-            <div
-              className={`mentor-card ${
-                selectedMentor?.id === mentor.id ? "selected" : ""
-              }`}
-              key={mentor.id}
-              onClick={() => handleMentorClick(mentor)}
-            >
-              <img
-                src={mentor.image}
-                alt={`${mentor.name}'s profile`}
-                className="mentor-image-placeholder"
-              />
+        {/* Mentor List (Visible by default in desktop, toggled in mobile) */}
+        <div className="mentor-list" style={{ display: isMobileView && showProfile ? "none" : "block" }}>
+          {mentorData.map((mentor) => (
+            <div className="mentor-card" key={mentor.id} onClick={() => handleMentorClick(mentor)}>
+              <img src={mentor.image} alt={`${mentor.name}'s profile`} className="mentor-image-placeholder" />
               <div className="mentor-details">
                 <h2 className="mentor-name">{mentor.name}</h2>
                 <p className="mentor-title">{mentor.title}</p>
                 <p className="mentor-info">{mentor.location}</p>
                 <p className="mentor-info">{mentor.experience}</p>
               </div>
-              <div className="bookmark-icon">🔖</div>
             </div>
           ))}
         </div>
 
-        {/* Right-side Selected Mentor Profile */}
-        <div className="mentor-profile-highlight">
-          <img
-            src={selectedMentor.image}
-            alt={`${selectedMentor.name}'s profile`}
-            className="profile-image-large"
-          />
-          <div className="profile-details">
-            <h2 className="profile-name">{selectedMentor.name}</h2>
-            <p className="profile-title">{selectedMentor.title}</p>
-            <p className="profile-info">Location: {selectedMentor.location}</p>
-            <p className="profile-info">Experience: {selectedMentor.experience}</p>
-            <p className="profile-info">Tags: {selectedMentor.tags.join(", ")}</p>
-          </div>
-          <div className="profile-actions">
-            <p className="profile-rating">Rating</p>
-            <button className="schedule-button">Schedule</button>
-          </div>
+        {/* Selected Mentor Profile (Hidden initially in mobile view) */}
+        <div className="mentor-profile-highlight" style={{ display: isMobileView && !showProfile ? "none" : "block" }}>
+          {selectedMentor && (
+            <>
+              <img src={selectedMentor.image} alt={`${selectedMentor.name}'s profile`} className="profile-image-large" />
+              <div className="profile-details">
+                <h2 className="profile-name">{selectedMentor.name}</h2>
+                <p className="profile-title">{selectedMentor.title}</p>
+                <p className="profile-info">Location: {selectedMentor.location}</p>
+                <p className="profile-info">Experience: {selectedMentor.experience}</p>
+                <p className="profile-info">Tags: {selectedMentor.tags.join(", ")}</p>
+              </div>
+              <div className="profile-actions">
+                <p className="profile-rating">Rating</p>
+                <button className="schedule-button">Schedule</button>
+              </div>
+              {isMobileView && (
+                <button className="back-button" onClick={handleBackClick}>
+                  Back to List
+                </button>
+              )}
+            </>
+          )}
         </div>
       </div>
     </div>
