@@ -1,11 +1,9 @@
-/* General Styles */
 .become-mentor-container {
   padding: 20px;
   background-color: #f9f9ff;
   color: #333;
 }
 
-/* Header Section */
 .become-mentor-header {
   text-align: center;
   margin-bottom: 40px;
@@ -79,7 +77,6 @@
   transition: transform 0.3s ease;
 }
 
-/* Get Started Section with Background Image */
 .get-started {
      display: flex;
     justify-content: space-between;
@@ -125,10 +122,9 @@
 
 .get-started .become-mentor-image {
   flex: 1;
-  display: none; /* Hide the placeholder image for this section */
+  display: none;
 }
 
-/* Footer Section */
 .become-mentor-footer {
   text-align: center;
   margin-top: 40px;
@@ -145,3 +141,30 @@
 .become-mentor-footer a:hover {
   text-decoration: underline;
 }
+ @media (max-width:1024px){
+  .become-mentor-image img{
+    max-width: 100%;
+  }
+  .become-mentor-section{
+    padding: 10px;
+  }
+  .become-mentor-header{
+    margin: 0px;
+  }
+ }
+ @media(max-width:768px){
+  .become-mentor-left{
+    padding: 10px;
+  }
+ }
+ @media(max-width:480px){
+  .become-mentor-image{
+    order:1;
+  }
+  .become-mentor-left{
+    order:2;
+  }
+  .become-mentor-section{
+    flex-direction: column;
+  }
+ }
