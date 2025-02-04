@@ -132,7 +132,7 @@
   }
   
   .forum-reply-input {
-    width: 100%;
+    width: 95%;
     height: 60px;
     padding: 10px;
     border: 1px solid #ccc;
@@ -263,3 +263,135 @@
   .forum-modal-buttons button:last-child:hover {
     background-color: #bbb;
   }
+  /* Mobile View */
+@media (max-width: 768px) {
+  .forum-discussion-page {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "left"
+      "main"
+      "right";
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .forum-left-sidebar {
+    grid-area: left; 
+    display: block;
+    padding: 15px;
+    margin-bottom: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .forum-menu {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    padding-bottom: 10px;
+  }
+
+  .forum-menu li {
+    padding: 8px 12px;
+    border-bottom: none;
+    font-size: 0.9rem;
+    background-color: #f8f5fc; 
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .forum-menu li:hover {
+    background-color: #6a0dad;
+    color: #fff;
+  }
+
+  .forum-main-content {
+    grid-area: main;
+    padding: 15px;
+  }
+
+  .forum-right-sidebar {
+    grid-area: right;
+    display: block;
+    padding: 15px;
+    margin-top: 10px;
+  }
+
+  .forum-new-thread-btn {
+    font-size: 0.9rem;
+    padding: 8px 0;
+    margin-bottom: 15px;
+  }
+
+  .forum-tags-section h4 {
+    font-size: 0.9rem;
+  }
+
+  .forum-tags span {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+  }
+
+  .forum-discussion-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .forum-author-image {
+    width: 40px;
+    height: 40px;
+  }
+
+  .forum-meta-info {
+    font-size: 0.8rem;
+  }
+
+  .forum-discussion-body {
+    font-size: 0.9rem;
+  }
+
+  .forum-comments .forum-comment {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  .forum-comment-meta {
+    font-size: 0.8rem;
+  }
+
+  .forum-reply-input {
+    height: 50px;
+    font-size: 0.8rem;
+  }
+
+  .forum-reply-btn {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  .forum-modal {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .forum-modal h3 {
+    font-size: 1rem;
+  }
+
+  .forum-modal-input,
+  .forum-modal-textarea {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+
+  .forum-modal-textarea {
+    height: 80px;
+  }
+
+  .forum-modal-buttons button {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}
