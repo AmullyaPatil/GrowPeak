@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="footer-container">
         {/* Left Section */}
         <div className="footer-left">
-          <h3 className="footer-logo">GrowPeak</h3>
+          <h3 className="footer-logo">Startora</h3>
           <p className="footer-description">
             Empowering communities to connect, learn, and grow together.
           </p>
@@ -47,7 +47,7 @@ const Footer = () => {
             </a>
           </div>
           <p className="footer-copyright">
-            © 2025 GrowPeak. All Rights Reserved.
+            © 2025 Startora. All Rights Reserved.
           </p>
         </div>
       </div>

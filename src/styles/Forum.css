@@ -264,7 +264,7 @@
     background-color: #bbb;
   }
   /* Mobile View */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .forum-discussion-page {
     grid-template-columns: 1fr;
     grid-template-areas:

@@ -25,7 +25,7 @@ const Header1 = () => {
   return (
     <>
       <header className="header">
-        <a href="#/" className={`header-logo ${activePage === "#/" ? "active" : ""}`}>GrowPeak</a>
+        <a href="#/" className={`header-logo ${activePage === "#/" ? "active" : ""}`}>Startora</a>
         <nav className="header-nav">
           <a href="#/" className={activePage === "#/" ? "active" : ""}>Home</a>
           <a href="#/forum" className={activePage === "#/forum" ? "active" : ""}>Community</a>
